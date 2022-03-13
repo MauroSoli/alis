@@ -8,13 +8,13 @@ iwctl station $WIFI_INTERFACE get-networks
 sleep 1.5
 read -p  "Insert SSID Name: " WIFI_ESSID
 read -sp "Insert Wi-Fi Password: " WIFI_KEY
-iwctl --passphrase $WIFI_KEY station $WIFI_INTERFACE connect $WIFI_ESSID                  # (Optional) Connect to WIFI network. _ip link show_ to know WIFI_INTERFACE.
+iwctl --passphrase $WIFI_KEY station $WIFI_INTERFACE connect $WIFI_ESSID                 # (Optional) Connect to WIFI network. _ip link show_ to know WIFI_INTERFACE.
 if [ "$?" = "1" ]; then
   echo "Impossibile collegarsi a $WIFI_ESSID"
   exit 1
 fi
 
-curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash     # Download alis scripts                                                 # Alternative download URL with URL shortener
+curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash     # Download alis scripts
 curl -sLo alis.conf https://raw.githubusercontent.com/MauroSoli/alis/master/alis.conf    # Download custom alis.conf
 
 #./alis-asciinema.sh      # (Optional) Start asciinema video recording
