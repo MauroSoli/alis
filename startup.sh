@@ -13,3 +13,11 @@ curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | 
 curl -sLo alis.conf https://raw.githubusercontent.com/MauroSoli/alis/master/alis.conf    #
 #./alis-asciinema.sh      # (Optional) Start asciinema video recording
 #./alis.sh      # (Optional) Start asciinema video recording
+
+#secure boot Installation
+pacman -Sy sbctl
+sbctl create-keys
+sbctl enroll-keys
+sbctl status
+# after reboot
+systemd-cryptenroll /dev/nvme0n1p1 --tpm2-pcrs=1+7+8 --tpm2-device=auto --wipe-slot=tpm2
