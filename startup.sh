@@ -3,7 +3,7 @@ loadkeys it       # Load keyboard keymap, eg. loadkeys es, loadkeys us, loadkeys
 
 # Connect to WIFI
 read -p  "Would you like to connect on wi-fi network?(yes/no): " WIFI_SET
-if [ "WIFI_SET" ! "yes" ]; then
+if [ "$WIFI_SET" = "yes" ]; then
   WIFI_INTERFACE=$(iwctl device list | grep wlan | awk '{print $1}')
   iwctl station $WIFI_INTERFACE scan
   iwctl station $WIFI_INTERFACE get-networks
