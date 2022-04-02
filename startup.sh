@@ -20,7 +20,7 @@ echo -e "\n"
 sleep 3
 
 curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash         # Download alis scripts
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/master/alis.conf > alis.conf  # Download custom alis.conf
+curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis.conf > alis.conf         # Download custom alis.conf
 
 #./alis-asciinema.sh      # (Optional) Start asciinema video recording
 ./alis.sh      # (Optional) Start asciinema video recording
