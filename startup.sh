@@ -1,3 +1,6 @@
+# Change DNS
+sed -E 's,nameserver.*,nameserver 8.8.8.8,g' -i /etc/resolv.conf
+
 #Download alis and custom config
 curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash          # Download alis scripts
 curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis.conf >> alis.conf         # Download custom alis.conf
