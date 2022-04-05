@@ -21,4 +21,4 @@ sleep 3
 
 curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/startup.sh > startup.sh 
 
-./startup.sh
+/bin/bash startup.sh
