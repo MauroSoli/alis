@@ -10,7 +10,7 @@ curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-packages.con
 ./alis.sh      
 
 #change default kernel
-#arch-chroot /mnt "sed -E 's,archlinux\.conf,archlinux-zen.conf,g' -i /boot/loader/loader.conf"
+#arch-chroot /mnt 'sed -E "s,archlinux\.conf,archlinux-zen.conf,g" -i /boot/loader/loader.conf'
 
 #enroll secure boot keys
 #arch-chroot /mnt 'sbctl create-keys; sbctl enroll-keys; sbctl status; sbctl verify'
