@@ -49,6 +49,10 @@ yay -S google-chrome --noconfirm --needed
 yay -S openfortigui --noconfirm --needed
 yay -S tigervnc-viewer  --noconfirm --needed
 
+# Code editors
+sudo pacman -Sy code --noconfirm --needed
+sudo pacman -Sy atom --noconfirm --needed
+
 #Cloud CLI
 sudo pacman -S aws-cli --noconfirm --needed
 yay -S google-cloud-sdk --noconfirm --needed
