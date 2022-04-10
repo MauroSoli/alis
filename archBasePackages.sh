@@ -45,6 +45,7 @@ sudo pacman -S terragrunt --noconfirm --needed
 sudo pacman -S obs-studio --noconfirm --needed
 sudo pacman -S ansible --noconfirm --needed
 sudo pacman -S mariadb-clients --noconfirm --needed
+yay -S lens --removemake --noconfirm --needed # dev'essere prima di ATOM!
 yay -S google-chrome --noconfirm --needed
 yay -S openfortigui --noconfirm --needed
 yay -S tigervnc-viewer  --noconfirm --needed
@@ -63,7 +64,6 @@ sudo pacman -S vagrant virt-manager bridge-utils openbsd-netcat --noconfirm --ne
 
 # Optional software
 sudo pacman -S telegram-desktop --noconfirm --needed
-yay -S lens --removemake --noconfirm --needed 
 sudo pacman -S solaar --noconfirm --needed
 sudo pacman -S ipcalc --noconfirm --needed
 
