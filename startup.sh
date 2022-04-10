@@ -1,8 +1,5 @@
-#!/usr/bin/env bash
-set -eu
-
 # Change DNS
-sed -E 's,nameserver.*,nameserver 8.8.8.8,g' -i /etc/resolv.conf
+#sed -E 's,nameserver.*,nameserver 8.8.8.8,g' -i /etc/resolv.conf
 
 #Download alis and custom config
 curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash          # Download alis scripts

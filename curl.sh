@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-set -e
-
 # Start the system with latest Arch Linux installation media
 loadkeys it       # Load keyboard keymap, eg. loadkeys es, loadkeys us, loadkeys de
 
