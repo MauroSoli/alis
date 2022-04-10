@@ -4,7 +4,7 @@
 #Download alis and custom config
 curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash                     # Download alis scripts
 curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis.conf > alis.conf                     # Download custom alis.conf
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-packages.conf >> alis-packages.conf  # Download custom alis.conf
+curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-packages.conf >> alis-packages.conf  # Download custom alis-packages.conf
 curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-commons.sh > alis-commons.sh  
 
 #./alis-asciinema.sh      # (Optional) Start asciinema video recording
