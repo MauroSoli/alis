@@ -56,6 +56,7 @@ yay -S tigervnc-viewer  --noconfirm --needed
 
 # Code editors
 sudo pacman -Sy code --noconfirm --needed
+yes | sudo pacman -S apm --noconfirm --needed
 sudo pacman -Sy atom --noconfirm --needed
 
 #Cloud CLI
