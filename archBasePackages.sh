@@ -32,7 +32,7 @@ sudo pacman -S git-lfs --noconfirm --needed
 git lfs install 
 sudo pacman -S net-tools --noconfirm --needed
 yay -Sy nautilus-compare --noconfirm --needed
-sudo pacman -S kubectl --needed
+sudo pacman -S kubectl --noconfirm --needed
 sudo pacman -S rclone --noconfirm --needed
 sudo pacman -S duplicity python-requests-oauthlib --noconfirm --needed 
 sudo pacman -S rsnapshot --noconfirm --needed
