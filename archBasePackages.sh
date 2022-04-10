@@ -29,7 +29,7 @@ yay -S chrome-gnome-shell --noconfirm --needed
 
 # Essential tools/software
 sudo pacman -S git-lfs --noconfirm --needed
-git install lfs
+git lfs install 
 sudo pacman -S net-tools --noconfirm --needed
 yay -Sy nautilus-compare --noconfirm --needed
 sudo pacman -S kubectl --needed
