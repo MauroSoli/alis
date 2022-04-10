@@ -2,7 +2,7 @@
 set -eu
 
 # Update system
-sudo pacman -Syu --noconfirm
+sudo pacman -Syu
 
 #Install git and yay
 sudo pacman -Sy git subversion --noconfirm --needed
