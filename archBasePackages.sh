@@ -59,7 +59,7 @@ sudo pacman -S vagrant virt-manager bridge-utils openbsd-netcat --noconfirm --ne
 
 # Optional software
 sudo pacman -S telegram-desktop --noconfirm --needed
-yay -S lens --noconfirm --needed
+yay -S lens --removemake --noconfirm --needed 
 sudo pacman -S solaar --noconfirm --needed
 sudo pacman -S ipcalc --noconfirm --needed
 
