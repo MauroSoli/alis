@@ -254,7 +254,7 @@ function aur_command_install() {
 }
 
 function systemd_units() {
-    IFS=' ' local UNITS=(${SYSTEMD_UNITS})
+    read -a local UNITS <<< $SYSTEMD_UNITS
     for U in ${UNITS[@]}; do
         local ACTION=""
         local UNIT=${U}
