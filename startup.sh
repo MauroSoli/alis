@@ -9,14 +9,14 @@ curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-packages.con
 #./alis-asciinema.sh      # (Optional) Start asciinema video recording
 ./alis.sh      
 
-#change default kernel
-sed -E "s,archlinux\.conf,archlinux-zen.conf,g" -i /mnt/boot/loader/loader.conf
-
-#Download script after first setup
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/archBasePackages.sh > /mnt/tmp/archBasePackages.sh          
-
-#Chroot script
-arch-chroot /mnt /tmp/archBasePackages.sh
+####change default kernel
+###sed -E "s,archlinux\.conf,archlinux-zen.conf,g" -i /mnt/boot/loader/loader.conf
+###
+####Download script after first setup
+###curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/archBasePackages.sh > /mnt/tmp/archBasePackages.sh          
+###
+####Chroot script
+###arch-chroot /mnt /tmp/archBasePackages.sh
 
 # Enroll secure boot keys
 #arch-chroot /mnt 'sbctl create-keys; sbctl enroll-keys; sbctl status; sbctl verify'
