@@ -14,6 +14,7 @@ curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-commons.sh >
 sed -E "s,archlinux\.conf,archlinux-zen.conf,g" -i /mnt/boot/loader/loader.conf
 
 #Download Custom alis inside chroot
+curl -sL https://github.com/MauroSoli/alis/archive/refs/heads/dell.zip > /mnt/root/alis/dell.zip
 mkdir -p /mnt/root/alis/
 arch-chroot /mnt unzip /root/alis/dell.zip -d /root/alis/
 arch-chroot /mnt rm -fv /root/alis/dell.zip
