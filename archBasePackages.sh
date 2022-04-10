@@ -2,7 +2,7 @@
 set -eu
 
 #Install git and yay
-sudo pacman -S git subversion --noconfirm --needed
+sudo pacman -Sy git subversion --noconfirm --needed
 if [ ! -f "/bin/yay" ]; then
     git clone https://aur.archlinux.org/yay.git
     cd yay
@@ -12,7 +12,7 @@ if [ ! -f "/bin/yay" ]; then
 fi
 
 # systemd-resolvd binary
-pacman -Sy systemd-resolvconf --noconfirm --needed
+sudo pacman -S systemd-resolvconf --noconfirm --needed
 
 # Pipewire packages + webrtc
 # lib32-pipewire lib32-pipewire-jack
