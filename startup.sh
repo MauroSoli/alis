@@ -14,9 +14,9 @@ curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-commons.sh >
 sed -E "s,archlinux\.conf,archlinux-zen.conf,g" -i /mnt/boot/loader/loader.conf
 
 #Download Custom alis inside chroot
-curl -sL https://github.com/MauroSoli/alis/archive/refs/heads/dell.zip > /mnt/root/dell.zip
-arch-chroot /mnt unzip /root/dell.zip -d /root/
-arch-chroot /mnt rm -fv /root/dell.zip
+curl -sL https://github.com/MauroSoli/alis/archive/refs/heads/dell.zip > /mnt/home/linux/dell.zip
+arch-chroot /mnt unzip /home/linux/dell.zip -d /home/linux
+arch-chroot /mnt rm -fv /home/linux/dell.zip
 
 # Enroll secure boot keys
 #arch-chroot /mnt 'sbctl create-keys; sbctl enroll-keys; sbctl status; sbctl verify'
