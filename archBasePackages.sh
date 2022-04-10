@@ -24,11 +24,11 @@ sudo pacman -S gnome-shell  gnome-terminal  gnome-tweak-tool gnome-control-cente
 sudo pacman -S nautilus --noconfirm --needed
 sudo pacman -S gnome-software gnome-software-packagekit-plugin gnome-multi-writer --noconfirm --needed
 sudo pacman -S networkmanager-fortisslvpn --noconfirm --needed
-pacman -S gnome-tweaks gnome-shell-extensions --noconfirm --needed
+sudo pacman -S gnome-tweaks gnome-shell-extensions --noconfirm --needed
 yay -S chrome-gnome-shell --noconfirm --needed
 
 # Essential tools/software
-pacman -S git-lfs --noconfirm --needed
+sudo pacman -S git-lfs --noconfirm --needed
 git install lfs
 sudo pacman -S net-tools --noconfirm --needed
 yay -Sy nautilus-compare --noconfirm --needed
@@ -59,8 +59,8 @@ sudo pacman -S vagrant virt-manager iptables-nft bridge-utils openbsd-netcat --n
 # Optional software
 sudo pacman -S telegram-desktop --noconfirm --needed
 yay -S lens --noconfirm --needed
-pacman -S solaar --noconfirm --needed
-pacman -S ipcalc --noconfirm --needed
+sudo pacman -S solaar --noconfirm --needed
+sudo pacman -S ipcalc --noconfirm --needed
 
 # Fonts
 sudo pacman -S ttf-cascadia-code --noconfirm --needed
