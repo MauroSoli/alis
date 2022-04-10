@@ -30,7 +30,7 @@ yay -S chrome-gnome-shell --noconfirm --needed
 # Essential tools/software
 sudo pacman -S git-lfs --noconfirm --needed
 git lfs install 
-sudo pacman -S net-tools --noconfirm --needed
+sudo pacman -S vi net-tools --noconfirm --needed
 yay -Sy nautilus-compare --noconfirm --needed
 sudo pacman -S kubectl --noconfirm --needed
 sudo pacman -S rclone --noconfirm --needed
@@ -54,7 +54,8 @@ sudo pacman -S aws-cli --noconfirm --needed
 yay -S google-cloud-sdk --noconfirm --needed
 
 # Hypervisor section
-sudo pacman -S vagrant virt-manager iptables-nft bridge-utils openbsd-netcat --noconfirm --needed
+yes | sudo pacman -S iptables-nft
+sudo pacman -S vagrant virt-manager bridge-utils openbsd-netcat --noconfirm --needed
 
 # Optional software
 sudo pacman -S telegram-desktop --noconfirm --needed
