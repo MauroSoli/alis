@@ -5,12 +5,13 @@ set -eu
 pacman -Sy systemd-resolvconf --noconfirm --needed
 
 # Pipewire packages + webrtc
-sudo pacman -S lib32-pipewire lib32-pipewire-jack pipewire-jack libpipewire02 pipewire pipewire-alsa pipewire-pulse gst-plugin-pipewire --needed
+# lib32-pipewire lib32-pipewire-jack
+sudo pacman -S  pipewire-jack libpipewire02 pipewire pipewire-alsa pipewire-pulse gst-plugin-pipewire --noconfirm --needed
 sudo pacman -S xdg-desktop-portal xdg-desktop-portal-gnome xdg-desktop-portal-gtk --noconfirm --needed
 
 # Gnome software
 sudo pacman -S gnome-shell  gnome-terminal  gnome-tweak-tool gnome-control-center xdg-user-dirs gdm --noconfirm --needed
-sudo pacman -S nautilus guake --noconfirm --needed
+sudo pacman -S nautilus --noconfirm --needed
 sudo pacman -S gnome-software gnome-software-packagekit-plugin gnome-multi-writer --noconfirm --needed
 sudo pacman -S networkmanager-fortisslvpn --noconfirm --needed
 pacman -S gnome-tweaks gnome-shell-extensions --noconfirm --needed
