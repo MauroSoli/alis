@@ -13,11 +13,10 @@ curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-commons.sh >
 #change default kernel
 sed -E "s,archlinux\.conf,archlinux-zen.conf,g" -i /mnt/boot/loader/loader.conf
 
-#Download script after first setup
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/archBasePackages.sh > /mnt/root/archBasePackages.sh          
-
-#Chroot script
-arch-chroot /mnt /bin/bash /root/archBasePackages.sh
+#Download Custom alis inside chroot
+mkdir -p /mnt/root/alis/
+arch-chroot /mnt unzip /root/alis/dell.zip -d /root/alis/
+arch-chroot /mnt rm -fv /root/alis/dell.zip
 
 # Enroll secure boot keys
 #arch-chroot /mnt 'sbctl create-keys; sbctl enroll-keys; sbctl status; sbctl verify'
