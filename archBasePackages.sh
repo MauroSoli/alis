@@ -54,7 +54,7 @@ sudo pacman -S aws-cli --noconfirm --needed
 yay -S google-cloud-sdk --noconfirm --needed
 
 # Hypervisor section
-yes | sudo pacman -S iptables-nft
+yes | sudo pacman -S iptables-nft --noconfirm --needed
 sudo pacman -S vagrant virt-manager bridge-utils openbsd-netcat --noconfirm --needed
 
 # Optional software
