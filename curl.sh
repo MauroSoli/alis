@@ -20,4 +20,5 @@ fi
 echo -e "\n"
 sleep 3
 
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/startup.sh | bash
+curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/startup.sh > startup.sh
+bash ./startup.sh
