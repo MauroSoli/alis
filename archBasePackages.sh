@@ -1,6 +1,9 @@
 #!/bin/bash
 set -eu
 
+# Update system
+sudo pacman -Syu --noconfirm
+
 #Install git and yay
 sudo pacman -Sy git subversion --noconfirm --needed
 if [ ! -f "/bin/yay" ]; then
