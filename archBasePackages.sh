@@ -1,6 +1,17 @@
 #!/bin/bash
 set -eu
 
+#Install git and yay
+sudo pacman -S git subversion --needed
+git lfs install
+if [ ! -f "/bin/yay" ]; then
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si
+    cd ..
+    rm -rf yay
+fi
+
 # systemd-resolvd binary
 pacman -Sy systemd-resolvconf --noconfirm --needed
 
@@ -18,8 +29,7 @@ pacman -S gnome-tweaks gnome-shell-extensions --noconfirm --needed
 yay -S chrome-gnome-shell --noconfirm --needed
 
 # Essential tools/software
-sudo pacman -S git subversion --needed
-git lfs install
+sudo pacman -S net-tools --noconfirm --needed
 yay -Sy nautilus-compare --noconfirm --needed
 sudo pacman -S kubectl --needed
 sudo pacman -S rclone --noconfirm --needed
