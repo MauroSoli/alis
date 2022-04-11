@@ -13,6 +13,9 @@ curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-commons.sh >
 #change default kernel
 sed -E "s,archlinux\.conf,archlinux-zen.conf,g" -i /mnt/boot/loader/loader.conf
 
+# change default timeout sudo
+echo -e "\nDefaults timestamp_timeout=240" >> /mnt/etc/sudoers
+
 #Download Custom alis inside chroot
 curl -sL https://github.com/MauroSoli/client_config/archive/refs/heads/dell.zip > /mnt/home/linux/dell.zip
 arch-chroot /mnt unzip /home/linux/dell.zip -d /home/linux
