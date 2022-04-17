@@ -24,9 +24,6 @@ curl -sL https://github.com/MauroSoli/client_config/archive/refs/heads/dell.zip 
 arch-chroot /mnt unzip /home/linux/dell.zip -d /home/linux
 arch-chroot /mnt rm -fv /home/linux/dell.zip
 
-# Post install script
-arch-chroot /mnt -u linux /bin/bash /home/linux/client_config-dell/archBasePackages.sh
-
 # Enroll secure boot keys
 #arch-chroot /mnt 'sbctl create-keys; sbctl enroll-keys; sbctl status; sbctl verify'
 
