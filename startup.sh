@@ -7,7 +7,7 @@ curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis.conf > alis.
 curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-packages.conf >> alis-packages.conf  # Download custom alis-packages.conf
 curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-commons.sh > alis-commons.sh  
 
-./alis-asciinema.sh      # (Optional) Start asciinema video recording
+#alis-asciinema.sh      # (Optional) Start asciinema video recording
 ./alis.sh                # Start Alis script
 
 # Change default kernel
