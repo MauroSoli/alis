@@ -10,8 +10,9 @@ curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-commons.sh >
 # alis-asciinema.sh      # (Optional) Start asciinema video recording
 ./alis.sh                # Start Alis script
 
-# Change default kernel
+# Change default kernel and timeout
 sed -E "s,archlinux\.conf,archlinux-zen.conf,g" -i /mnt/boot/loader/loader.conf
+sed -E "s,timeout.*,timeout 0,g" -i /mnt/boot/loader/loader.conf
 
 # Change default timeout sudo
 echo -e "\nDefaults timestamp_timeout=240" >> /mnt/etc/sudoers
