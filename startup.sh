@@ -24,6 +24,13 @@ curl -sL https://github.com/MauroSoli/client_config/archive/refs/heads/dell.zip 
 arch-chroot /mnt unzip /home/linux/dell.zip -d /home/linux
 arch-chroot /mnt rm -fv /home/linux/dell.zip
 
+# Change passwd root and liunx
+arch-chroot /mnt passwd root
+arch-chroot /mnt passwd linux
+
+# Change luks password
+cryptsetup luksChangeKey /dev/nvme0n1p8 -S 0
+
 # Enroll secure boot keys
 #arch-chroot /mnt /usr/bin/sbctl create-keys
 #arch-chroot /mnt /usr/bin/sbctl enroll-keys
