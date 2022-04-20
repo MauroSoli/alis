@@ -29,7 +29,7 @@ arch-chroot /mnt rm -fv /home/linux/dell.zip
 #arch-chroot /mnt /usr/bin/sbctl enroll-keys
 #arch-chroot /mnt /usr/bin/sbctl status
 #arch-chroot /mnt /usr/bin/sbctl sign-all
-#arch-chroot /mnt /usr/bin/sbctl sbctl verify
+#arch-chroot /mnt /usr/bin/sbctl verify
 
 # Enroll luks system key to tpm
 #systemd-cryptenroll /dev/nvme0n1p1 --tpm2-pcrs=1+7+8 --tpm2-device=auto --wipe-slot=tpm2
