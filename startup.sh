@@ -2,10 +2,10 @@
 #sed -E 's,nameserver.*,nameserver 8.8.8.8,g' -i /etc/resolv.conf
 
 # Download alis and custom config
-curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash                     # Download alis scripts
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis.conf > alis.conf                     # Download custom alis.conf
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-packages.conf >> alis-packages.conf  # Download custom alis-packages.conf
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/dell/alis-commons.sh > alis-commons.sh  
+curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash                             # Download alis scripts
+curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis.conf > alis.conf                     # Download custom alis.conf
+curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis-packages.conf >> alis-packages.conf  # Download custom alis-packages.conf
+curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis-commons.sh > alis-commons.sh  
 
 # alis-asciinema.sh      # (Optional) Start asciinema video recording
 ./alis.sh                # Start Alis script
@@ -21,9 +21,9 @@ echo -e "\nDefaults timestamp_timeout=240" >> /mnt/etc/sudoers
 mkdir -p /mnt/var/log/journal
 
 # Download Custom alis inside chroot
-curl -sL https://github.com/MauroSoli/client_config/archive/refs/heads/dell.zip > /mnt/home/linux/dell.zip
-arch-chroot /mnt unzip /home/linux/dell.zip -d /home/linux
-arch-chroot /mnt rm -fv /home/linux/dell.zip
+curl -sL https://github.com/MauroSoli/client_config/archive/refs/heads/latitude5300.zip > /mnt/home/linux/latitude5300.zip
+arch-chroot /mnt unzip /home/linux/latitude5300.zip -d /home/linux
+arch-chroot /mnt rm -fv /home/linux/latitude5300.zip
 
 # Change passwd root and liunx
 arch-chroot /mnt passwd root
