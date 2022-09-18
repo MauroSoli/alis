@@ -2,7 +2,7 @@
 #sed -E 's,nameserver.*,nameserver 8.8.8.8,g' -i /etc/resolv.conf
 
 # Download alis and custom config
-curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash                             # Download alis scripts
+curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/download.sh | bash                             # Download alis scripts
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis.sh > alis.sh                         # Download alis.sh stable version
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis.conf > alis.conf                     # Download custom alis.conf
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis-packages.conf >> alis-packages.conf  # Download custom alis-packages.conf
