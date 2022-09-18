@@ -30,7 +30,7 @@ chmod +x *.sh
 #sed -E 's,nameserver.*,nameserver 8.8.8.8,g' -i /etc/resolv.conf 
 
 # alis-asciinema.sh      # (Optional) Start asciinema video recording
-#./alis.sh                # Start Alis script
+./alis.sh                # Start Alis script
 
 # Change default kernel and timeout
 sed -E "s,archlinux\.conf,archlinux-zen.conf,g" -i /mnt/boot/loader/loader.conf
