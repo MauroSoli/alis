@@ -1,8 +1,36 @@
+#!/usr/bin/env bash
+set -eu
+
+# Arch Linux Install Script (alis) installs unattended, automated
+# and customized Arch Linux system.
+# Copyright (C) 2022 picodotdev
+GITHUB_USER="MauroSoli"
+BRANCH="latitude5300"
+
+while getopts "u:" arg; do
+  case ${arg} in
+    u)
+      GITHUB_USER=${OPTARG}
+      ;;
+    ?)
+      echo "Invalid option: -${OPTARG}."
+      exit 1
+      ;;
+  esac
+done
+
+set -o xtrace
+curl -sL -o "alis-$BRANCH.zip" https://github.com/$GITHUB_USER/alis/archive/refs/heads/$BRANCH.zip
+bsdtar -x -f "alis-$BRANCH.zip"
+cp -R alis-$BRANCH/*.sh alis-$BRANCH/*.conf alis-$BRANCH/files/ alis-$BRANCH/configs/ ./
+chmod +x configs/*.sh
+chmod +x *.sh
+
 # Change DNS
 #sed -E 's,nameserver.*,nameserver 8.8.8.8,g' -i /etc/resolv.conf
 
 # Download alis and custom config
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/download.sh | bash                             # Download alis scripts
+#curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/download.sh | bash                             # Download alis scripts
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis.sh > alis.sh                         # Download alis.sh stable version
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis.conf > alis.conf                     # Download custom alis.conf
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis-packages.conf >> alis-packages.conf  # Download custom alis-packages.conf
