@@ -33,7 +33,7 @@ chmod +x *.sh
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/download.sh | bash                             # Download alis scripts
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis.sh > alis.sh                         # Download alis.sh stable version
 curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis.conf > alis.conf                     # Download custom alis.conf
-#curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis-packages.conf >> alis-packages.conf  # Download custom alis-packages.conf
+curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis-packages.conf >> alis-packages.conf  # Download custom alis-packages.conf
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis-commons.sh > alis-commons.sh  
 
 # alis-asciinema.sh      # (Optional) Start asciinema video recording
