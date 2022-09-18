@@ -4,9 +4,8 @@ set -eu
 # Arch Linux Install Script (alis) installs unattended, automated
 # and customized Arch Linux system.
 # Copyright (C) 2022 picodotdev
-https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis.sh
-GITHUB_USER="MauroSoli"
-BRANCH="latitude5300"
+GITHUB_USER="picodotdev"
+BRANCH="master"
 
 while getopts "u:" arg; do
   case ${arg} in
