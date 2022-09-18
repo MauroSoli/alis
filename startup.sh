@@ -55,12 +55,14 @@ arch-chroot /mnt passwd linux
 cryptsetup luksChangeKey /dev/nvme0n1p6 -S 0
 
 # Enroll secure boot keys
+# Ancora da testare! (tranne installazione sbctl) 
 arch-chroot /mnt pacman -Sy sbctl --noconfirm --needed
-#arch-chroot /mnt /usr/bin/sbctl create-keys
-#arch-chroot /mnt /usr/bin/sbctl enroll-keys
-#arch-chroot /mnt /usr/bin/sbctl status
-#arch-chroot /mnt /usr/bin/sbctl sign-all
-#arch-chroot /mnt /usr/bin/sbctl verify
+arch-chroot /mnt /usr/bin/sbctl create-keys
+arch-chroot /mnt /usr/bin/sbctl enroll-keys
+arch-chroot /mnt /usr/bin/sbctl status
+arch-chroot /mnt /usr/bin/sbctl verify | boot |
+awk '{print $2}' | while read line; do sbctl sign $line; done
+arch-chroot /mnt /usr/bin/sbctl verify
 
 # Enroll luks system key to tpm
-#systemd-cryptenroll /dev/nvme0n1p1 --tpm2-pcrs=1+7+8 --tpm2-device=auto --wipe-slot=tpm2
+#systemd-cryptenroll /dev/nvme0n1p6 --tpm2-pcrs=1+7+8 --tpm2-device=auto --wipe-slot=tpm2
