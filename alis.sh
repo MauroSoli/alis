@@ -1886,43 +1886,43 @@ function main() {
 
     execute_step "sanitize_variables"
     execute_step "check_variables"
-    execute_step "warning"
-    execute_step "init"
-    execute_step "facts"
-    execute_step "checks"
-    execute_step "prepare"
-    execute_step "partition"
-    execute_step "install"
-    execute_step "configuration"
-    execute_step "mkinitcpio_configuration"
-    execute_step "users"
-    if [ -n "$DISPLAY_DRIVER" ]; then
-        execute_step "display_driver"
-    fi
-    execute_step "kernels"
-    execute_step "mkinitcpio"
-    execute_step "network"
-    if [ "$VIRTUALBOX" == "true" ]; then
-        execute_step "virtualbox"
-    fi
-    if [ "$VMWARE" == "true" ]; then
-        execute_step "vmware"
-    fi
-    execute_step "bootloader"
-    if [ -n "$CUSTOM_SHELL" ]; then
-        execute_step "custom_shell"
-    fi
-    if [ -n "$DESKTOP_ENVIRONMENT" ]; then
-        execute_step "desktop_environment"
-        execute_step "display_manager"
-    fi
-    execute_step "packages"
-    if [ "$PROVISION" == "true" ]; then
-        execute_step "provision"
-    fi
-    if [ "$VAGRANT" == "true" ]; then
-        execute_step "vagrant"
-    fi
+    #execute_step "warning"
+    #execute_step "init"
+    #execute_step "facts"
+    #execute_step "checks"
+    #execute_step "prepare"
+    #execute_step "partition"
+    #execute_step "install"
+    #execute_step "configuration"
+    #execute_step "mkinitcpio_configuration"
+    #execute_step "users"
+    #if [ -n "$DISPLAY_DRIVER" ]; then
+    #    execute_step "display_driver"
+    #fi
+    #execute_step "kernels"
+    #execute_step "mkinitcpio"
+    #execute_step "network"
+    #if [ "$VIRTUALBOX" == "true" ]; then
+    #    execute_step "virtualbox"
+    #fi
+    #if [ "$VMWARE" == "true" ]; then
+    #    execute_step "vmware"
+    #fi
+    #execute_step "bootloader"
+    #if [ -n "$CUSTOM_SHELL" ]; then
+    #    execute_step "custom_shell"
+    #fi
+    #if [ -n "$DESKTOP_ENVIRONMENT" ]; then
+    #    execute_step "desktop_environment"
+    #    execute_step "display_manager"
+    #fi
+    #execute_step "packages"
+    #if [ "$PROVISION" == "true" ]; then
+    #    execute_step "provision"
+    #fi
+    #if [ "$VAGRANT" == "true" ]; then
+    #    execute_step "vagrant"
+    #fi
     execute_step "systemd_units"
     local END_TIMESTAMP=$(date -u +"%F %T")
     local INSTALLATION_TIME=$(date -u -d @$(($(date -d "$END_TIMESTAMP" '+%s') - $(date -d "$START_TIMESTAMP" '+%s'))) '+%T')
