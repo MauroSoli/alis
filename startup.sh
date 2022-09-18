@@ -4,8 +4,8 @@ set -eu
 # Arch Linux Install Script (alis) installs unattended, automated
 # and customized Arch Linux system.
 # Copyright (C) 2022 picodotdev
-GITHUB_USER="picodotdev"
-BRANCH="master"
+GITHUB_USER="MauroSoli"
+BRANCH="latitude5300"
 
 while getopts "u:" arg; do
   case ${arg} in
@@ -32,8 +32,8 @@ chmod +x *.sh
 # Download alis and custom config
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/download.sh | bash                             # Download alis scripts
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis.sh > alis.sh                         # Download alis.sh stable version
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis.conf > alis.conf                     # Download custom alis.conf
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis-packages.conf >> alis-packages.conf  # Download custom alis-packages.conf
+#curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis.conf > alis.conf                     # Download custom alis.conf
+#curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis-packages.conf >> alis-packages.conf  # Download custom alis-packages.conf
 #curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/alis-commons.sh > alis-commons.sh  
 
 # alis-asciinema.sh      # (Optional) Start asciinema video recording
