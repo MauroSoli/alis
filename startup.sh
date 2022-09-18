@@ -27,7 +27,7 @@ chmod +x configs/*.sh
 chmod +x *.sh
 
 # Change DNS
-#sed -E 's,nameserver.*,nameserver 8.8.8.8,g' -i /etc/resolv.conf 
+sed -E 's,nameserver.*,nameserver 8.8.8.8,g' -i /etc/resolv.conf 
 
 # alis-asciinema.sh      # (Optional) Start asciinema video recording
 ./alis.sh                # Start Alis script
