@@ -42,10 +42,16 @@ echo -e "\nDefaults timestamp_timeout=240" >> /mnt/etc/sudoers
 # Add persistent journalctl
 mkdir -p /mnt/var/log/journal
 
-# Download Custom alis inside chroot
+# Download Custom alis under chroot system
 curl -sL https://github.com/$GITHUB_USER/alis/archive/refs/heads/$BRANCH.zip > /mnt/home/linux/latitude5300.zip
 arch-chroot /mnt unzip /home/linux/latitude5300.zip -d /home/linux
 arch-chroot /mnt rm -fv /home/linux/latitude5300.zip
+
+# Download client_config repo under chroot 
+mkdir -p /mnt/home/linux/appoggio
+curl -sL https://github.com/$GITHUB_USER/client_config/archive/refs/heads/$BRANCH.zip > /mnt/home/linux/appoggio/$BRANCH.zip
+arch-chroot /mnt unzip /home/linux/appoggio/$BRANCH.zip -d /home/linux/appoggio
+arch-chroot /mnt rm -fv /home/linux/appoggio/$BRANCH.zip
 
 # Change passwd root and liunx
 arch-chroot /mnt passwd root
