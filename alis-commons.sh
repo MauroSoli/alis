@@ -270,7 +270,7 @@ function systemd_units() {
             local UNIT=$(echo $UNIT | sed "s/^-//g")
         elif [[ $UNIT == +* ]]; then
             local ACTION="enable"
-            local UNIT=$(echo $UNIT | sed "s/^+//g"
+            local UNIT=$(echo $UNIT | sed "s/^+//g")
         elif [[ $UNIT =~ ^[a-zA-Z0-9]+ ]]; then
             local ACTION="enable"
             local UNIT=$UNIT
