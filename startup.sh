@@ -26,8 +26,11 @@ cp -R alis-$BRANCH/*.sh alis-$BRANCH/*.conf alis-$BRANCH/files/ alis-$BRANCH/con
 chmod +x configs/*.sh
 chmod +x *.sh
 
-# Change DNS
-sed -E 's,nameserver.*,nameserver 8.8.8.8,g' -i /etc/resolv.conf 
+# Disable IPV6
+cat <<EOF >> /etc/sysctl.conf
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+EOF
 
 # alis-asciinema.sh      # (Optional) Start asciinema video recording
 ./alis.sh                # Start Alis script
