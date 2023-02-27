@@ -67,7 +67,7 @@ arch-chroot /mnt /usr/bin/sbctl create-keys
 arch-chroot /mnt /usr/bin/sbctl enroll-keys
 arch-chroot /mnt /usr/bin/sbctl status
 arch-chroot /mnt /usr/bin/sbctl verify | grep boot |
-awk '{print $2}' | while read line; do sbctl sign $line; done
+             awk '{print $2}' | while read line; do sbctl sign $line; done
 arch-chroot /mnt /usr/bin/sbctl verify
 
 # Enroll luks system key to tpm
