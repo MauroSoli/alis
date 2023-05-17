@@ -27,6 +27,7 @@ chmod +x configs/*.sh
 chmod +x *.sh
 
 # Need for reflector
+pacman -S archlinux-keyring
 pacman -Sy python3 --noconfirm
 
 # Disable IPV6
