@@ -48,9 +48,9 @@ mkdir -p /mnt/var/log/journal
 
 # Download Custom alis under chroot system
 mkdir -p /mnt/home/linux/appoggio
-curl -sL https://github.com/$GITHUB_USER/alis/archive/refs/heads/$BRANCH.zip > /mnt/home/linux/appoggio/totem.zip
-arch-chroot /mnt unzip /home/linux/appoggio/totem.zip -d /home/linux/appoggio
-arch-chroot /mnt rm -fv /home/linux/appoggio/totem.zip
+curl -sL https://github.com/$GITHUB_USER/alis/archive/refs/heads/$BRANCH.zip > /mnt/home/linux/appoggio/$BRANCH.zip
+arch-chroot /mnt unzip /home/linux/appoggio/$BRANCH.zip -d /home/linux/appoggio
+arch-chroot /mnt rm -fv /home/linux/appoggio/$BRANCH.zip
 
 # Download client_config repo under chroot 
 curl -sL https://github.com/$GITHUB_USER/client_config/archive/refs/heads/$BRANCH.zip > /mnt/home/linux/appoggio/$BRANCH.zip
