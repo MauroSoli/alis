@@ -5,7 +5,7 @@ set -eu
 # and customized Arch Linux system.
 # Copyright (C) 2022 picodotdev
 GITHUB_USER="MauroSoli"
-BRANCH="latitude5300"
+BRANCH="totem"
 
 while getopts "u:" arg; do
   case ${arg} in
@@ -44,9 +44,9 @@ mkdir -p /mnt/var/log/journal
 
 # Download Custom alis under chroot system
 mkdir -p /mnt/home/linux/appoggio
-curl -sL https://github.com/$GITHUB_USER/alis/archive/refs/heads/$BRANCH.zip > /mnt/home/linux/appoggio/latitude5300.zip
-arch-chroot /mnt unzip /home/linux/appoggio/latitude5300.zip -d /home/linux/appoggio
-arch-chroot /mnt rm -fv /home/linux/appoggio/latitude5300.zip
+curl -sL https://github.com/$GITHUB_USER/alis/archive/refs/heads/$BRANCH.zip > /mnt/home/linux/appoggio/totem.zip
+arch-chroot /mnt unzip /home/linux/appoggio/totem.zip -d /home/linux/appoggio
+arch-chroot /mnt rm -fv /home/linux/appoggio/totem.zip
 
 # Download client_config repo under chroot 
 curl -sL https://github.com/$GITHUB_USER/client_config/archive/refs/heads/$BRANCH.zip > /mnt/home/linux/appoggio/$BRANCH.zip
@@ -58,7 +58,7 @@ arch-chroot /mnt passwd root
 arch-chroot /mnt passwd linux
 
 # Change luks password
-cryptsetup luksChangeKey /dev/nvme0n1p6 -S 0
+#### cryptsetup luksChangeKey /dev/nvme0n1p6 -S 0
 
 # Enroll secure boot keys
 # Ancora da testare! (tranne installazione sbctl) 
