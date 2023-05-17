@@ -27,7 +27,7 @@ chmod +x configs/*.sh
 chmod +x *.sh
 
 # Need for reflector
-pacman -Sy python3 openssl --noconfirm
+pacman -Sy python3 --noconfirm
 
 # Disable IPV6
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
