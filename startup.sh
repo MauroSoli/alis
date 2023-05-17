@@ -26,6 +26,9 @@ cp -R alis-$BRANCH/*.sh alis-$BRANCH/*.conf alis-$BRANCH/files/ alis-$BRANCH/con
 chmod +x configs/*.sh
 chmod +x *.sh
 
+# Need for reflector
+pacman -Sy python3 openssl --noconfirm
+
 # Disable IPV6
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
 
