@@ -26,8 +26,8 @@ cp -R alis-$BRANCH/*.sh alis-$BRANCH/*.conf alis-$BRANCH/files/ alis-$BRANCH/con
 chmod +x configs/*.sh
 chmod +x *.sh
 
-# Need for reflector
-pacman -S archlinux-keyring
+# Need for reflector and to have update packages
+pacman -S archlinux-keyring --noconfirm
 pacman -Sy python3 --noconfirm
 
 # Disable IPV6
