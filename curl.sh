@@ -20,5 +20,5 @@ fi
 echo -e "\n"
 sleep 3
 
-curl -sL https://raw.githubusercontent.com/MauroSoli/alis/latitude5300/startup.sh > startup.sh
+curl -sL https://raw.githubusercontent.com/MauroSoli/alis/totem/startup.sh > startup.sh
 bash ./startup.sh
